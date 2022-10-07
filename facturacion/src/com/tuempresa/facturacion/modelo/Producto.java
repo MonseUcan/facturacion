@@ -11,7 +11,8 @@ import lombok.*;
 @Entity @Getter @Setter
 public class Producto {
  
-	@Id @Column(length=9)
+	@Id 
+	@Column(length=9)
 	int numero;
 	
 	@Column(length=50)@Required
@@ -33,4 +34,8 @@ public class Producto {
 	
 	@TextArea
 	String observaciones;
+	
+	@ManyToOne(fetch=FetchType.LAZY)
+	@DescriptionsList
+	Autor autor;
 }
