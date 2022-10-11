@@ -1,2 +1,5 @@
 /*C4*/SET SCHEMA PUBLIC
 DISCONNECT
+/*C6*/SET SCHEMA PUBLIC
+alter table FACTURACION.DOCUMENTOCOMERCIAL add column factura_oid varchar(32)
+alter table facturacion.DocumentoComercial add constraint FK4lhtu14i3f0y8m4ohuxww2b48 foreign key (factura_oid) references facturacion.DocumentoComercial
