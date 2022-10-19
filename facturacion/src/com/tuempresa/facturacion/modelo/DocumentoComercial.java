@@ -82,4 +82,9 @@ abstract public class DocumentoComercial extends Identificable{
         this.numero = ultimoNumero == null ? 1 : ultimoNumero + 1;
   
     }
+    
+    @org.hibernate.annotations.Formula("IMPORTETOTAL * 0.10")
+    @Setter(AccessLevel.NONE)
+    @Stereotype("DINERO")
+    BigDecimal beneficioEstimado;
 }
